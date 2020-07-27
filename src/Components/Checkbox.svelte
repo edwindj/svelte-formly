@@ -5,6 +5,8 @@
   export let classe = "";
   export let aligne = "default";
   export let items = [];
+  export let readonly = false;
+
   const dispatch = createEventDispatcher();
   // Change value.
   function onChangeValue(event) {
@@ -34,6 +36,7 @@
       class={clsx(classe)}
       id={item.id}
       name={item.name}
+      {readonly}
       checked={item.checked ? item.checked : false}
       on:input={onChangeValue} />
     <span>{item.title}</span>

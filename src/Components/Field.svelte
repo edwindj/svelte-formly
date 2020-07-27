@@ -127,12 +127,14 @@
         classe={field.class}
         items={field.items}
         aligne={field.aligne}
+        readonly={field.readonly}
         on:changeValue={changeValueHander} />
     {:else if field.type === 'checkbox'}
       <Checkbox
         classe={field.class}
         items={field.items}
         aligne={field.aligne}
+        readonly={field.readonly}
         on:changeValue={changeValueHander} />
     {:else if field.type === 'file'}
       <File
